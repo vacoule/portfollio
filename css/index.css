@@ -1,0 +1,419 @@
+* {
+  font-family: sans-serif;
+}
+#active {
+  color: #0d6efd;
+  font-weight: 600;
+}
+.container {
+  padding: 0 50px;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+.align-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container{
+background-color: white;
+}
+
+.nav {
+  height: 80px;
+  width: 100%;
+  background-color: white;
+  z-index: 111;
+}
+.nav ul li a {
+  color: black;
+  text-decoration: none;
+  margin: 0 10px;
+}
+.nav ul li a:hover {
+  color: #0d6efd;
+}
+/* ======= big screen nav ====== */
+@media screen and (min-width: 550px) {
+  .nav {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav ul li {
+    display: inline-block;
+  }
+
+  #portfollio {
+    font-size: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    left: 30px;
+    position: absolute;
+    display: inline-block;
+  }
+  #contact {
+    right: 30px;
+    position: absolute;
+    display: inline-block;
+  }
+}
+/* ======= big screen nav ====== */
+.blue-button {
+  text-decoration: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+.blue-button:hover {
+  background-color: #0e60db;
+  transition: 0.3s;
+  color: white;
+}
+.blue-button:active {
+  background-color: aliceblue;
+  color: black;
+}
+.nav-backup {
+  height: 80px;
+  width: 100%;
+}
+
+/* =====End of Navber===== */
+
+.welcome-text {
+  display: flex;
+  align-items: center;
+}
+.welcome-text h1 {
+  font-size: 30px;
+  padding: 40px 5px 0 5px;
+}
+.welcome-text p {
+  padding: 10px 10px 30px 10px;
+}
+.welcome-text a {
+  margin: 10px;
+}
+.welcome-img {
+  height: auto;
+  position: relative;
+}
+.welcome-img img {
+  border-radius: 50% 10% 30% 0px;
+}
+.welcome-img h2 {
+  position: absolute;
+  bottom: 10%;
+  left: 20px;
+  color: white;
+  font-size: 1.4em;
+}
+@media screen and (max-width: 768px) {
+  .welcome-img {
+    margin-top: 50px;
+  }
+}
+
+/* =====End of welcome====== */
+
+.my-card {
+  margin: 5px;
+  border-radius: 3px;
+
+}
+
+.my-card-border {
+  border-right: 2px solid rgba(0, 0, 0, 0.1);
+}
+.my-card h2 {
+  margin: 10px;
+  border-bottom: 4px solid #0d6efd;
+  display: inline-block;
+}
+.my-card p {
+  padding: 5px;
+}
+#my-skills {
+  border-right: none;
+}
+.my-skill {
+  list-style-type: square;
+  list-style-position: inside;
+}
+@media screen and (max-width: 768px) {
+  .my-card {
+    margin-top: 20px;
+    padding: 10px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  }
+  .my-card-border {
+    border: none;
+  }
+}
+/* ======END of my===== */
+@media screen and (min-width: 769px) {
+  .images {
+    height: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+}
+.image-card {
+ position: relative;
+ height: auto;
+ width: auto;
+}
+.images img {
+  border-radius: 5px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 9/8;
+  object-fit: cover;
+  
+}
+.about-image h2 {
+  font-size: 28px;
+  display: inline-block;
+  border-bottom: 4px solid #0d6efd;
+}
+.about-image p {
+  padding: 20px 0;
+}
+
+.image-detail h3 {
+  padding: 10px 0 5px 10px;
+}
+.image-detail p {
+  padding: 0px 0 10px 10px;
+}
+
+.image-detail {
+  opacity: 0;
+  position: absolute;
+  background-color: #0d6efd;
+  width: 100%;
+  bottom: 3px;
+  border-radius: 0 0 4px 4px;
+  transition: 0.4s;
+}
+.image-card:hover > .image-detail {
+  opacity: 1;
+}
+
+/* ======Images media query====== */
+@media screen and (max-width: 768px) {
+  .images {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 10px;
+    grid-auto-columns: 60%;
+    overflow-x: scroll;
+  }
+  .scroll-snap {
+    scroll-snap-type: x mandatory;
+  }
+  .scroll-snap > * {
+    scroll-snap-align: center;
+  }
+}
+
+/* =====End of Some Image===== */
+
+.contact-card {
+  height: 150px;
+  width: 100%;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+  margin: 20px 0 0 0;
+}
+.icon-font {
+  font-size: 48px;
+  color: #0d6efd;
+}
+
+/* =====END OF CONTACT===== */
+
+.form-control{
+  height: 40px;
+  padding: 0 0 0 10px;
+  width: 95%;
+  border-radius: 4px;
+  outline: none;
+  font-size: 15px;
+  border: 3px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+ background-color: transparent;
+}
+
+#text{
+  width: 100%;
+  resize: vertical;
+  padding: 10px;
+  background-color: transparent;
+  border: 3px solid rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+/* ======End of Email====== */
+
+.input {
+  height: 300px;
+  width: 100%;
+}
+.input-area {
+  width: 80%;
+}
+.input-area h2 {
+  font-size: 25px;
+  padding: 10px;
+}
+.input-area p1 {
+  padding: 10px;
+}
+.input-area p2 {
+  color: rgba(0, 0, 0, 0.7);
+  padding: 5px;
+  font-size: 15px;
+}
+.input-area input {
+  width: 50%;
+  margin: 10px;
+  outline: none;
+  border-color: #0d6efd;
+  border-radius: 4px;
+  padding: 2px;
+}
+.input-check {
+  margin: 0px 0 10px 10px;
+  outline: none;
+  border: none;
+}
+.output-area {
+  width: 80%;
+  height: 181px;
+  text-align: center;
+}
+.output-area h2 {
+  font-size: 22px;
+  padding-top: 50px;
+}
+.toss{
+  background-color: aliceblue;
+}
+@media screen and (max-width: 768px) {
+  .input {
+    height: 250px;
+  }
+  .input-area {
+    margin-top: 50px;
+  }
+}
+
+/* =====End of Guessing game====== */
+/*=======foooter======*/
+
+.footer-main {
+  height: 200px;
+  margin-top: 30px;
+  width: 100%;
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+}
+.copy-write a{
+  text-decoration: none;
+}
+/* ======End of Footer====== */
+
+.night-mode{
+  height: 20px;
+  width: 40px;
+  border-radius: 10px;
+  margin: 10px;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  border: 1px solid black;
+  cursor: pointer;
+ background-color: white;
+}
+.night-ball{
+  height: 20px;
+  width: 20px;
+ font-size: 24px;
+  border-radius: 50%;
+  position: absolute;
+  transition: .5s;
+  transform: translate(0,-5px);
+ 
+}
+.con-night{
+  background-color: black;
+  border: 4px solid rgba(0, 0, 255, 0.34);
+}
+.col-night-nav ul li a{
+  color: white;
+}
+.col-night{
+  color: white;
+}
+
+
+
+
+
+
+
+
+/* ======Guessing game===== */
+
+.congra {
+  animation: con 1s 1 forwards;
+}
+@keyframes con {
+  100% {
+    background-color: #04aa6d;
+  }
+}
+.sorry {
+  animation: sor 1s 1 forwards;
+}
+@keyframes sor {
+  100% {
+    background-color: #0d6efd;
+  }
+}
+.oops {
+  animation: oop 1s 1 forwards;
+}
+@keyframes oop {
+  100% {
+    background-color: red;
+  }
+}
