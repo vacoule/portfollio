@@ -5,24 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfollio</title>
-    <link rel="stylesheet" href="/css/modified.bootstrap.min.css" />
-    <link rel="stylesheet" href="/css/index.css" />
-    <link href="/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/modified.bootstrap.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
     <div class="nav">
       <a href="#" id="portfollio">Portfollio</a>
-      <ul>
+      <div class="nav-res">
+          <ul class="nav-ul">
         <li><a href="#" id="active">Home</a></li>
         <li><a href="#">Blog</a></li>
         <li><a href="#">About</a></li>
+        <li id="contact" onclick="reverseFunction()"><a href="#go" >contact</a></li>
       </ul>
-      <a
-        href="#go"
-        id="contact"
-        class="blue-button bg-blue"
-        >Contact</a
-      >
+    
+      </div>
+      <div class="fas" onclick="fasFunction()">
+        <div class="fs fs-1"></div>
+        <div class="fs fs-2"></div>
+        <div class="fs fs-3"></div>
+      </div>
     </div>
     <div class="nav-backup"></div>
 
@@ -48,7 +50,7 @@
               of course in photoshop
             </h2>
             <img
-              src="/img/mee.gif"
+              src="img/mee.gif"
               class=""
               height="auto"
               width="100%"
@@ -101,7 +103,7 @@
   <div  class="main-image-container">
     <div class="about-image">
       <h2>Some of my imges</h2>
-      <p>Who knew that mankind would be able to capture outside their brain ! well here are some images of myself....
+      <p>Who knew that mankind would be able to capture memory outside their brain ! <br> well here are some images of myself....
       </p>
     </div>
       <div class="images scroll-snap">
@@ -113,14 +115,14 @@
             <h3>Blu skys</h3>
             <p>When I was like 13 </p>
           </div>
-           <img src="/img/1.jpg" >
+           <img src="img/1.jpg" >
         </div>
         <div class="image-card">
           <div class="image-detail">
             <h3>Decent</h3>
             <p>It was sunny a day</p>
           </div>
-           <img src="/img/5.jpg" >
+           <img src="img/5.jpg" >
            
         </div>
         <div class="image-card">
@@ -128,7 +130,7 @@
             <h3>At evening</h3>
             <p>Walking around our fields</p>
           </div>
-           <img src="/img/3.jpg">
+           <img src="img/3.jpg">
            
         </div>
         <div class="image-card">
@@ -136,7 +138,7 @@
             <h3>School picnic</h3>
             <p>My dad took the photo at our school picnic</p>
           </div>
-           <img src="/img/4.jpg">
+           <img src="img/4.jpg">
            
         </div>
         <div class="image-card">
@@ -144,7 +146,7 @@
             <h3>College days</h3>
             <p>At the time of going to college</p>
           </div>
-           <img src="/img/2.jpg" >
+           <img src="img/2.jpg" >
            
         </div>
         <div class="image-card">
@@ -152,7 +154,7 @@
             <h3>Childhood</h3>
             <p>This photo was taken from my first phone</p>
           </div>
-           <img src="/img/6.jpg" >
+           <img src="img/6.jpg" >
            
         </div>
    
@@ -166,17 +168,23 @@
 
 <div class="row" id="go" style="margin-bottom: 30px;">
   <div class="col-md-4"><div class="address-card contact-card" >
-    <i class="icon-font bi-geo-alt"></i>
+    <svg xmlns="http://www.w3.org/2000/svg" height="48px" fill="currentColor" viewBox="0 0 24 24" width="48px"  fill="#000000" style="color: #0d6efd;"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+
     <h2>Address</h2>
     <p>*******,Dhaka <br> Bangladesh </p>
   </div></div>
-  <div class="col-md-4"><div class="phone-number-card contact-card">
-    <i class="icon-font bi-phone"></i>
+  <div class="col-md-4"><div class="phone-number-card contact-card">   <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-phone" viewBox="0 0 16 16" style="color:#0d6efd;">
+      <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z"/>
+      <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+    </svg>
+   
     <h2>Phone Number</h2>
     <p>+880 1677176***</p>
   </div></div>
   <div class="col-md-4"><div class="email-card contact-card">
-    <i class="icon-font bi-envelope"></i>
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16" style="color: #0d6efd;">
+      <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+    </svg>
     <h2>Email</h2>
     <a href="#" style="text-decoration:none">kogit7@gmail.com</a>
   </div></div>
@@ -207,7 +215,7 @@
          <p2>(Enter a digit 0-5 )</p2> <br>
          
          <input  type="number" name="" id="guess-number" value="0"> <br>
-         <button onclick="inputFunction()" href="#" class="input-check blue-button bg-blue">Check</button>
+         <button onclick="inputFunction()" href="#" class="input-check blue-button bg-blue" >Check</button>
      </div>
        </div>
      </div>
@@ -238,9 +246,15 @@
 <!-- =======End of footer====== -->
 <div class="night-mode" id="day-night" title="Night mode" onclick="nightFunction()">
   <div class="night-ball" id="day-night-ball">
-    <i class="bi-brightness-high-fill" id="bi-icon"></i>
+    <div class="day"> <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-brightness-high-fill" viewBox="0 0 16 16">
+      <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+    </svg></div>
+    <div class="night"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-moon-fill" viewBox="0 0 16 16">
+      <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+    </svg></div>
+   
   </div>
 </div>
-    <script src="/js/index.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>

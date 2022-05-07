@@ -23,51 +23,134 @@
   align-items: center;
   justify-content: center;
 }
-.container{
-background-color: white;
-}
-
-.nav {
-  height: 80px;
-  width: 100%;
-  background-color: white;
-  z-index: 111;
-}
-.nav ul li a {
-  color: black;
-  text-decoration: none;
-  margin: 0 10px;
-}
-.nav ul li a:hover {
-  color: #0d6efd;
-}
-/* ======= big screen nav ====== */
-@media screen and (min-width: 550px) {
-  .nav {
-    position: fixed;
+/* ======NAV BAR====== */
+@media screen and (min-width:501px) {
+  .nav{
+    height: 80px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  .nav ul li {
-    display: inline-block;
+    position: fixed;
+    z-index: 3;
+    background-color: white;
   }
 
-  #portfollio {
-    font-size: 30px;
-    text-decoration: none;
-    font-weight: 700;
-    left: 30px;
-    position: absolute;
-    display: inline-block;
+  .nav-res{
+    height: 80px;
+    width: 100%;
+    text-align: center;
   }
-  #contact {
-    right: 30px;
-    position: absolute;
+  .nav-res ul li{
     display: inline-block;
+    line-height: 80px;
+    margin: 0px 5px;
+  }
+  .nav-res ul li a{
+    text-decoration: none;
+    color: black;
+  }
+  .nav-res ul li a:hover{
+    color: #0d6efd;
+  }
+  #contact{
+    position: absolute;
+     right: 30px;
+  }
+  #contact a{
+    background-color: #0d6efd;
+    color: white;
+    font-weight: 700;
+    padding: 8px 12px;
+    border-radius: 5px;
+  }
+  #contact a:hover{
+    background-color: #0e60db;
+  }
+  .fas{
+    display: none;
   }
 }
-/* ======= big screen nav ====== */
+#portfollio{
+  position: absolute;
+  left: 30px;
+  font-size: 30px;
+  text-decoration: none;
+}
+/* =======End of big screen nav ====== */
+@media screen and (max-width:500px) {
+ .nav{
+   height: 70px;
+   width: 100%;
+   background-color: white;
+   position: fixed;
+   z-index: 3;
+  
+ }
+ .nav-res{
+   height: 100vh;
+   width: 100%;
+   background-color: aliceblue;
+   margin-top: 70px;
+   text-align: center;
+   transition: .3s;
+   transform: translateX(100%);
+   position: relative;
+   
+ }
+ .nav-res-visibility{
+   transform: translateX(0%);
+ }
+ .nav-res ul li{
+   border-bottom: 3px solid rgba(0, 0, 0, 0.07);
+   padding: 8px 0;
+   list-style: none;
+ }
+ .nav-res ul li a{
+   text-decoration: none;
+   color: black;
+ }
+ #portfollio{
+   margin-top: 15px;
+ }
+  .fas{
+    height: 36px;
+    width: 36px;
+    position: fixed;
+    z-index: 4;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+     gap: 2px;
+     top: 15px;
+     cursor: pointer;
+   
+  }
+  .fs{
+    height: 10px;
+    width: 100%;
+    background-color: black;
+    border-radius: 3px;
+    transition: 1s;
+  }
+  .fs3{
+   transform: rotateZ(-50deg) translateX(10px);
+  }
+  .fs2{
+   transform: translatex(100px);
+  }
+ .fs1{
+   transform: rotateZ(50deg) translateX(10px);
+  }
+}
+
+
+/* ======Fas bar ===== */
+
+
+
+
+/* ======End of NAV====== */
 .blue-button {
   text-decoration: none;
   color: white;
@@ -326,9 +409,14 @@ background-color: white;
 @media screen and (max-width: 768px) {
   .input {
     height: 250px;
+    
   }
   .input-area {
     margin-top: 50px;
+    width: 100%;
+  }
+  .output-area{
+    width: 100%;
   }
 }
 
@@ -362,6 +450,7 @@ background-color: white;
   border: 1px solid black;
   cursor: pointer;
  background-color: white;
+ z-index: 5;
 }
 .night-ball{
   height: 20px;
@@ -370,12 +459,22 @@ background-color: white;
   border-radius: 50%;
   position: absolute;
   transition: .5s;
-  transform: translate(0,-5px);
+  transform: translate(0,-3px);
  
+}
+.day{
+display: block;
+}
+.night{
+  display: none;
+  color: yellow;
 }
 .con-night{
   background-color: black;
   border: 4px solid rgba(0, 0, 255, 0.34);
+}
+.don-night{
+  background-color: white;
 }
 .col-night-nav ul li a{
   color: white;

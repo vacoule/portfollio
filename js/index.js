@@ -1,3 +1,22 @@
+function fasFunction() {
+  document.getElementsByClassName("fs-1")[0].classList.toggle("fs1");
+  document.getElementsByClassName("fs-2")[0].classList.toggle("fs2");
+  document.getElementsByClassName("fs-3")[0].classList.toggle("fs3");
+  document.getElementsByClassName("nav-res")[0].classList.toggle("nav-res-visibility");
+}
+function reverseFunction() {
+  if( document.getElementsByClassName("nav-res")[0].classList.contains("nav-res-visibility"))
+ {
+    document.getElementsByClassName("nav-res")[0].classList.remove("nav-res-visibility");
+    document.getElementsByClassName("fs-1")[0].classList.toggle("fs1");
+    document.getElementsByClassName("fs-2")[0].classList.toggle("fs2");
+    document.getElementsByClassName("fs-3")[0].classList.toggle("fs3");
+  }
+}
+// =====END OF NAV=====
+
+
+//=====Start of guessing game======>>>
 function inputFunction() {
   let inputNumber = document.getElementById("guess-number").value;
   let myGuess = Math.floor(Math.random() * 5);
@@ -40,14 +59,14 @@ function inputFunction() {
     }
   }
 }
-
-// =====Night mode settle=====
+//<<<=====END OF GUESSING GAME======
+// =====Night mode settle=====>>>
 
 let night = 0;
-
 function nightFunction() {
   let dayNightBall = document.getElementById("day-night-ball");
-  let biIcon = document.getElementById("bi-icon");
+  let dayMODE = document.getElementsByClassName("day");
+  let nightMode = document.getElementsByClassName("night");
   let row = document.getElementsByClassName("row");
   let container = document.getElementsByClassName("container");
   let nav = document.getElementsByClassName("nav");
@@ -57,6 +76,8 @@ function nightFunction() {
   let footer = document.getElementsByClassName("footer-main");
   let contactForm = document.getElementsByClassName("form-control");
   let toss = document.getElementsByClassName("toss");
+  let fas = document.getElementsByClassName("fs");
+  let navres = document.getElementsByClassName("nav-res");
   let sendText = document.getElementById("text");
   console.log(sendText);
   let mainImage = document.getElementsByClassName("main-image-container");
@@ -74,9 +95,11 @@ function nightFunction() {
     if (night % 2 == 1) {
       myCard[i].classList.add("col-night");
       contactCard[i].classList.add("col-night");
+      fas[i].classList.add("don-night");
     } else {
       myCard[i].classList.remove("col-night");
       contactCard[i].classList.remove("col-night");
+      fas[i].classList.remove("don-night");
     }
   }
 
@@ -87,6 +110,8 @@ function nightFunction() {
     document.body.classList.add("con-night");
     toss[0].classList.add("con-night");
     toss[1].classList.add("con-night");
+    navres[0].classList.add("con-night");
+    
   } else {
     nav[0].classList.remove("con-night");
     container[0].classList.remove("con-night");
@@ -94,6 +119,7 @@ function nightFunction() {
     document.body.classList.remove("con-night");
     toss[0].classList.remove("con-night");
     toss[1].classList.remove("con-night");
+    navres[0].classList.remove("con-night");
   }
   if (night % 2 == 1) {
     nav[0].classList.add("col-night-nav");
@@ -105,10 +131,9 @@ function nightFunction() {
     contactForm[0].style.border = "3px solid white";
     contactForm[1].style.border = "3px solid white";
     sendText.style.border = "3px solid white";
-    dayNightBall.style.transform = "translate(20px,-5px)";
-    biIcon.classList.remove("bi-brightness-high-fill");
-    dayNightBall.classList.add("bi-moon-fill");
-    dayNightBall.style.color = "yellow";
+    dayNightBall.style.transform = "translate(20px,-3px)";
+    dayMODE[0].style.display ="none";
+    nightMode[0].style.display ="block";
   } else {
     nav[0].classList.remove("col-night-nav");
     welcome[0].classList.remove("col-night");
@@ -121,7 +146,10 @@ function nightFunction() {
     sendText.style.border = "3px solid rgba(0, 0, 0, 0.2)";
     dayNightBall.style.transform = "translate(0px,-3px)";
     dayNightBall.classList.remove("bi-moon-fill");
-    biIcon.classList.add("bi-brightness-high-fill");
     dayNightBall.style.color = "black";
+    nightMode[0].style.display = "none";
+    dayMODE[0].style.display = "block";
+    console.log(nightMode[0]);
   }
 }
+//<<<=====end of night mode settle
