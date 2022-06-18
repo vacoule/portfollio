@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfollio</title>
+    <title>salman</title>
+    <link rel="icon" href="img/6.jpg">
     <link rel="stylesheet" href="css/modified.bootstrap.min.css" />
     <link rel="stylesheet" href="css/index.css" />
-    <link href="bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
   </head>
   <body>
     <div class="nav">
@@ -15,11 +16,10 @@
       <div class="nav-res">
           <ul class="nav-ul">
         <li><a href="#" id="active">Home</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">About</a></li>
+        <li><a href="html/blog.html">Blog</a></li>
+        <li><a href="html/about.html">About</a></li>
         <li id="contact" onclick="reverseFunction()"><a href="#go" >contact</a></li>
       </ul>
-    
       </div>
       <div class="fas" onclick="fasFunction()">
         <div class="fs fs-1"></div>
@@ -32,8 +32,9 @@
     <!-- =====End of Navber===== -->
 
     <div class="container">
-      <div class="row" style="margin: 30px 0 30px 0">
-        <div class="col-md-6 welcome-text">
+      <div class="row" style="margin: 30px 0 30px 0;
+      ">
+        <div class="col-md-6 welcome-text omni-animation">
           <div class="welcome-align">
             <h1>Welcome to my portfollio</h1>
             <p>
@@ -44,7 +45,7 @@
           </div>
         </div>
         <div class="col-md-6">
-          <div class="welcome-img">
+          <div class="welcome-img omni-animation">
             <h2>
               Hey, <br />
               I painted my self <br />
@@ -68,7 +69,7 @@
           <div class="my-education my-card">
             <h2>My Education</h2>
             <p>
-             I am now studiyng at <a href="">Dhamrai Govt college.</a> <br>
+             I am now studiyng at <a href="http://www.dhamraigovtcollege.edu.bd/">Dhamrai Govt college.</a> <br>
              I passed my SSC from <a href="">Dhalkunda High school. </a> <br>
              I am hopping to get myself addmitted to a university 
             </p>
@@ -76,7 +77,7 @@
           </div>
         </div>
         <div class="col-md-4 my-card-border">
-          <div class="my-experiance my-card ">
+          <div class="my-experiance my-card">
             <h2>My Hobbies</h2>
             <p>
               Some of my favourite hobbies are fishing,
@@ -187,7 +188,7 @@
       <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
     </svg>
     <h2>Email</h2>
-    <a href="#" style="text-decoration:none">kogit7@gmail.com</a>
+    <a href="mailto:kogit7@gmail.com" style="text-decoration:none" >kogit7@gmail.com</a>
   </div></div>
 </div>
 
@@ -204,14 +205,43 @@
 </div>
 <textarea name="text" id="text" cols="30" rows="10" value="" placeholder="Your text"></textarea>
 <div class="row">
-  <button class="blue-button bg-blue" style="float: right;"> Send</button>
+  <div class="col-md-12">
+    <button class="blue-button bg-blue send-email"> Send</button>
+  </div>
 </div>
 
 
-      <!-- =====End of Contact me===== -->
+      <!-- =====End of Contact me email===== -->
+    <div class="row">
+      <div class="col-md-12">
+        <div class="facebook">
+            <div class="facebook-text">
+              <div class="text-with-logo">
+                <img src="img/facebook-icon.png" alt=""> 
+                <h1>Me on facebook</h1>
+              </div>
+          
+        <p>Contact me on facebook</p>
+        </div>
+        <a href="www.facebook.com">
+           <div class="facebook-id">
+          <img src="img/1.jpg" alt="">
+          <a href="www.facebook.com" class="facebook-link">Visit on facebook</a>
+        </div>
+        </a>
+       
+        </div>
+      
+      </div>
+    </div>
+
+
+    
+
+    <!-- =====end of my facebook===== -->
 
    <div class="row">
-     <div class="col-md-6">
+     <div class="col-md-6 game-gutter-l">
        <div class="input align-center">
            <div class="input-area toss">
          <h2>A little fun</h2>
@@ -223,7 +253,7 @@
      </div>
        </div>
      </div>
-     <div class="col-md-6">
+     <div class="col-md-6 game-gutter-r">
        <div class="input align-center">
            <div class="output-area toss" id="output-background">
              <h2 id="congrats">Let me think 🤔</h2>
@@ -248,6 +278,19 @@
      </div>
     </div>
 <!-- =======End of footer====== -->
+<div class="routine">
+  <section class="text">
+    <h1>Class routine</h1>
+  <p>Download our class routine</p>
+  </section>
+  <secton class="file">
+   <a href="Class routine.pdf" class="text-animation2" >Download routine</a>
+  </secton>
+  
+</div>
+
+
+<!-- ======End of routine===== -->
 <div class="night-mode" id="day-night" title="Night mode" onclick="nightFunction()">
   <div class="night-ball" id="day-night-ball">
     <div class="day"> <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-brightness-high-fill" viewBox="0 0 16 16">
