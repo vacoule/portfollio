@@ -554,14 +554,34 @@
   height: 200px;
   margin-top: 30px;
   width: 100%;
-  background-color: aliceblue;
+  background-color: rgb(237, 242, 247);
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  flex-direction: column;
 }
 .copy-write a {
   text-decoration: none;
+}
+.company{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+ 
+}
+.company a{
+   text-decoration: none;
+}
+.company img{
+  height: 30px;
+  width: auto;
+  margin-left: 5px;
+}
+.company-logo{
+  display: flex;
+  align-items: center;
 }
 /* ======End of Footer====== */
 
