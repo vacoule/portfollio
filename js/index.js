@@ -61,95 +61,53 @@ function inputFunction() {
 }
 //<<<=====END OF GUESSING GAME======
 // =====Night mode settle=====>>>
-
 let night = 0;
 function nightFunction() {
-  let dayNightBall = document.getElementById("day-night-ball");
-  let dayMODE = document.getElementsByClassName("day");
-  let nightMode = document.getElementsByClassName("night");
-  let row = document.getElementsByClassName("row");
-  let container = document.getElementsByClassName("container");
-  let nav = document.getElementsByClassName("nav");
-  let welcome = document.getElementsByClassName("welcome-text");
-  let myCard = document.getElementsByClassName("my-card");
-  let contactCard = document.getElementsByClassName("contact-card");
-  let footer = document.getElementsByClassName("footer-main");
-  let contactForm = document.getElementsByClassName("form-control");
-  let toss = document.getElementsByClassName("toss");
-  let fas = document.getElementsByClassName("fs");
-  let navres = document.getElementsByClassName("nav-res");
-  let sendText = document.getElementById("text");
-  console.log(sendText);
-  let mainImage = document.getElementsByClassName("main-image-container");
-  night++;
-
-  for (let i = 0; i < 7; i++) {
-    if (night % 2 == 1) {
-      row[i].classList.add("con-night");
-    } else {
-      row[i].classList.remove("con-night");
+night++
+  let nightTogglerAncor = document.getElementsByTagName("a");
+  let nightTogglerBG = document.getElementsByClassName("night-toggler-bg");
+  let nightTogglerBGW= document.getElementsByClassName("night-toggler-bgW");
+  let nightTogglerBorder = document.getElementsByClassName("night-toggler-border");
+  let nightLogoNight = document.getElementsByClassName("night-logo")[0];
+  let nightLogoDay = document.getElementsByClassName("day-logo")[0];
+  document.body.classList.toggle("night-toggler-body")
+  
+  
+    for (i = 0; i < nightTogglerBGW.length; i++){
+      nightTogglerBGW[i].classList.toggle("night-toggler-bgw-on");
+  }
+    for (i = 0; i < nightTogglerBG.length; i++){
+      nightTogglerBG[i].classList.toggle("night-toggler-bg-on");
+  }
+    for (i = 0; i < nightTogglerBorder.length; i++){
+      nightTogglerBorder[i].classList.toggle("night-toggler-border-on");
     }
+  
+  
+  for (i = 0; i < nightTogglerAncor.length; i++){
+    nightTogglerAncor[i].classList.toggle("night-toggler-ancor-on");
+ 
   }
 
-  for (i = 0; i < 3; i++) {
-    if (night % 2 == 1) {
-      myCard[i].classList.add("col-night");
-      contactCard[i].classList.add("col-night");
-      fas[i].classList.add("don-night");
-    } else {
-      myCard[i].classList.remove("col-night");
-      contactCard[i].classList.remove("col-night");
-      fas[i].classList.remove("don-night");
-    }
-  }
+
+
 
   if (night % 2 == 1) {
-    nav[0].classList.add("con-night");
-    container[0].classList.add("con-night");
-    footer[0].classList.add("con-night");
-    document.body.classList.add("con-night");
-    toss[0].classList.add("con-night");
-    toss[1].classList.add("con-night");
-    navres[0].classList.add("con-night");
-    
+    nightLogoNight.style.display = "none";
+    nightLogoDay.style.display = "block";
+
   } else {
-    nav[0].classList.remove("con-night");
-    container[0].classList.remove("con-night");
-    footer[0].classList.remove("con-night");
-    document.body.classList.remove("con-night");
-    toss[0].classList.remove("con-night");
-    toss[1].classList.remove("con-night");
-    navres[0].classList.remove("con-night");
-  }
-  if (night % 2 == 1) {
-    nav[0].classList.add("col-night-nav");
-    welcome[0].classList.add("col-night");
-    footer[0].classList.add("col-night");
-    mainImage[0].classList.add("col-night");
-    toss[0].classList.add("col-night");
-    toss[1].classList.add("col-night");
-    contactForm[0].style.border = "3px solid white";
-    contactForm[1].style.border = "3px solid white";
-    sendText.style.border = "3px solid white";
-    dayNightBall.style.transform = "translate(20px,-3px)";
-    dayMODE[0].style.display ="none";
-    nightMode[0].style.display ="block";
-  } else {
-    nav[0].classList.remove("col-night-nav");
-    welcome[0].classList.remove("col-night");
-    footer[0].classList.remove("col-night");
-    mainImage[0].classList.remove("col-night");
-    toss[0].classList.remove("col-night");
-    toss[1].classList.remove("col-night");
-    contactForm[0].style.border = "3px solid rgba(0, 0, 0, 0.2)";
-    contactForm[1].style.border = "3px solid rgba(0, 0, 0, 0.2)";
-    sendText.style.border = "3px solid rgba(0, 0, 0, 0.2)";
-    dayNightBall.style.transform = "translate(0px,-3px)";
-    dayNightBall.classList.remove("bi-moon-fill");
-    dayNightBall.style.color = "black";
-    nightMode[0].style.display = "none";
-    dayMODE[0].style.display = "block";
-    console.log(nightMode[0]);
-  }
+    nightLogoNight.style.display = "block";
+    nightLogoDay.style.display = "none";
+ }
+
+  
+
+
+
+
 }
+// notes -->
+//          1.in night mode nav link color must be white
+//              
 //<<<=====end of night mode settle
