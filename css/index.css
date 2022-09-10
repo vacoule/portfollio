@@ -75,7 +75,7 @@ body {
   }
 }
 
-@media screen and (min-width: 501px) {
+@media screen and (min-width: 554px) {
   .nav {
     height: 80px;
     width: 100%;
@@ -139,7 +139,7 @@ body {
 }
 
 /* =======End of big screen nav ====== */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 555px) {
   .nav {
     height: 70px;
     width: 100%;
