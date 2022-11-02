@@ -244,11 +244,6 @@ body {
 }
 
 /* =====End of Navber===== */
-.master {
-  animation: body 1s 1 forwards;
-  transform: scale(1.5);
-
-}
 
 @keyframes body {
   100% {
